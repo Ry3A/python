@@ -14,8 +14,11 @@ def pyshader(func, w, h):
 
 # Ваш код здесь:
 def func(x, y):
-    if (2 * x - 1)**2 + 0.2 > y or -(2 * x - 1)**2 + 0.8 < y:
+    if x > y and -x+1 < y  or (x - 0.3)**2 + (y - 0.3)**2 < 0.005:
+        return x, y, 0
+    if (x - 0.5)**2 + (y - 0.5)**2 < 0.2:
         return 256, 256, 256
+
     else:
         return x, y, 0
 
