@@ -1,5 +1,5 @@
-import math
 '''
+import math
 def func(x):
     return math.sqrt((55*(69 * x**3 + 2 * x**2 + 1)**4 - 7)
                      //(15*(2 * x + 73 + 75 * x**2) +
@@ -17,3 +17,17 @@ def func(z):
 
 print(func(-28))
 '''
+import math
+
+def func(b, n, y):
+    a = 0
+    for j in range(1, b + 1):
+        a += (math.log2(j**3 / 80))**6 - (78 * j**3 - 58 * j**2)**5
+    for j in range(1, n + 1):
+        c = 1
+        for i in range(1, b + 1):
+            c *= (4 * y**2 + 0.02 + 25 * i**3)**4 - 1 - 97 * j**2
+        a += c
+    return a
+
+print(func(8, 7, 0.39))
