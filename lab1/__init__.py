@@ -16,7 +16,7 @@ def func(z):
         return 96*(1 - 97*z**3)
 
 print(func(-28))
-'''
+''''''
 import math
 
 def func(b, n, y):
@@ -31,3 +31,13 @@ def func(b, n, y):
     return a
 
 print(func(8, 7, 0.39))
+'''
+import math
+
+def func(n):
+    if n == 0:
+        return 0.44
+    else:
+        return func(n - 1) - (abs(func(n - 1)))**3 / 57
+
+print(func(4))
