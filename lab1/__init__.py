@@ -31,7 +31,7 @@ def func(b, n, y):
     return a
 
 print(func(8, 7, 0.39))
-'''
+''''''
 import math
 
 def func(n):
@@ -41,3 +41,14 @@ def func(n):
         return func(n - 1) - (abs(func(n - 1)))**3 / 57
 
 print(func(4))
+'''
+import math
+
+def func(x):
+    a = 0
+    for i in range(1, 6):
+        a += (6 * (x[5 - math.ceil(i/3)])**2 - 58 * (x[5 - i])**3 - 36)**7
+    return a
+
+
+print(func([0.89, -0.67, 0.79, 0.61, -0.15]))
