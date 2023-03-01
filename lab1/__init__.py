@@ -52,7 +52,7 @@ def func(x):
 
 
 print(func([0.89, -0.67, 0.79, 0.61, -0.15]))
-'''
+''''''
 def func(x):
     match x[3]:
         case 2018:
@@ -104,3 +104,12 @@ print(func(['LEAN', 1960, 'HAML', 2018, 'TEX']))
 print(func(['LEAN', 2009, 'HAML', 1980, 'TEX']))
 print(func(['YANG', 2009, 'HAML', 1980, 'SCSS']))
 print(func(['LEAN', 1960, 'SCAML', 1980, 'SCSS']))
+'''
+def func(x):
+    a = bin(int(x, 10))[2:]
+    a = '0' * (30 - len(a)) + a
+    a = '0b' + a[0:3] + a[20:26] + a[10:19] + a[3:10] + a[26:30] + '0'
+    return (str(hex(int(a, 2))))
+
+print(func('573941375'))
+print(func('573941375') == '0x24eb447e')
