@@ -41,7 +41,7 @@ def func(n):
         return func(n - 1) - (abs(func(n - 1)))**3 / 57
 
 print(func(4))
-'''
+''''''
 import math
 
 def func(x):
@@ -52,3 +52,55 @@ def func(x):
 
 
 print(func([0.89, -0.67, 0.79, 0.61, -0.15]))
+'''
+def func(x):
+    match x[3]:
+        case 2018:
+            match x[0]:
+                case 'D':
+                    match x[1]:
+                        case 1960:
+                            return 0
+                        case 2009:
+                            match x[2]:
+                                case 'HAML':
+                                    return 1
+                                case 'C++':
+                                    return 2
+                                case 'SCAML':
+                                    return 3
+                        case 1976:
+                            return 4
+                case 'LEAN':
+                    return 5
+                case 'YANG':
+                    match x[4]:
+                        case 'SCSS':
+                            return 6
+                        case 'TEX':
+                            return 7
+        case 1980:
+            match x[1]:
+                case 1960:
+                    return 8
+                case 1976:
+                    return 13
+                case 2009:
+                    match x[2]:
+                        case 'C++':
+                            return 11
+                        case 'SCAML':
+                            return 12
+                        case 'HAML':
+                            match x[4]:
+                                case 'SCSS':
+                                    return 9
+                                case 'TEX':
+                                    return 10
+
+
+print(func(['YANG', 2009, 'HAML', 2018, 'TEX']))
+print(func(['LEAN', 1960, 'HAML', 2018, 'TEX']))
+print(func(['LEAN', 2009, 'HAML', 1980, 'TEX']))
+print(func(['YANG', 2009, 'HAML', 1980, 'SCSS']))
+print(func(['LEAN', 1960, 'SCAML', 1980, 'SCSS']))
